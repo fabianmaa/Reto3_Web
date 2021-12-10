@@ -43,16 +43,9 @@ public class ChocolateService {
         if (chocolate.getReference() != null) {
             Optional<Chocolate> chocolateDb = chocolateRepository.getChocolate(chocolate.getReference());
             if (!chocolateDb.isEmpty()) {
-                if (chocolate.getBrand() != null) {
-                    chocolateDb.get().setBrand(chocolate.getBrand());
-                }
-
+                
                 if (chocolate.getCategory() != null) {
                     chocolateDb.get().setCategory(chocolate.getCategory());
-                }
-
-                if (chocolate.getMaterial() != null) {
-                    chocolateDb.get().setMaterial(chocolate.getMaterial());
                 }
 
                 if (chocolate.getDescription() != null) {
